@@ -38,6 +38,29 @@
       <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
     </div>
     <p id="load">Firebase SDK Loading&hellip;</p>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyDRAvnZXaHEm64pEeVpj0KcmH3-v_DNL9g",
+    authDomain: "installation-of-bagisto.firebaseapp.com",
+    databaseURL: "https://installation-of-bagisto.firebaseio.com",
+    projectId: "installation-of-bagisto",
+    storageBucket: "installation-of-bagisto.appspot.com",
+    messagingSenderId: "36859104291",
+    appId: "1:36859104291:web:d9f4b51391330bc0ad3596",
+    measurementId: "G-R0ZM6W9PZT"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
 
     <script>
       document.addEventListener('DOMContentLoaded', function() {
@@ -63,15 +86,3 @@
     </script>
   </body>
 </html>
-
-<script>
-var admin = require("firebase-admin");
-
-var serviceAccount = require("path/to/serviceAccountKey.json");
-
-admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount),
-  databaseURL: "https://installation-of-bagisto.firebaseio.com"
-});
-</script>
-
